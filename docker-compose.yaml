@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  trufflehog_module:
+    build: ./trufflehog_module
+    container_name: trufflehog_scanner
+    environment:
+      - MODULE_ID=trufflehog-scanner
+      - MODULE_BASE_URL=http://trufflehog_scanner:8080
+      - MOBSEC_API_URL=http://host.docker.internal:8000/api/v1
+    ports:
+      - "8080:8080"
+    networks:
+      - external_module_network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+networks:
+  external_module_network:
+    name: mobsec_app_network
+    external: true

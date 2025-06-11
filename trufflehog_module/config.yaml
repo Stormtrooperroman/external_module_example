@@ -1,0 +1,6 @@
+name: "TruffleHog Scanner"
+version: "1.0.0"
+description: "Внешний модуль для поиска секретов в мобильных приложениях с использованием TruffleHog"
+input_formats:
+  - "apk"
+  - "ipa"
