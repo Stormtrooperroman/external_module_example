@@ -9,7 +9,7 @@ services:
       - MODULE_BASE_URL=http://trufflehog_scanner:8080
       - MOBSEC_API_URL=http://host.docker.internal:8000/api/v1
     ports:
-      - "8080:8080"
+      - "8083:8080"
     networks:
       - external_module_network
     extra_hosts:

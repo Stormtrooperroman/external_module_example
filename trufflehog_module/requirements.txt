@@ -1,10 +1,4 @@
-fastapi>=0.68.0
-uvicorn>=0.15.0
-pydantic>=1.8.2
-httpx>=0.23.0
 requests>=2.27.1
 aiofiles>=0.7.0
 python-multipart>=0.0.5
-PyYAML>=6.0 
-redis>=4.5.5
-minio>=7.1.0
+mobsec-modules-library>=0.0.2
